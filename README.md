@@ -35,16 +35,16 @@ The numbers behind the speed claims, including where voltdir does not win yet, a
 
 The skill needs `voltdir.exe` (Windows x64) on your `PATH`, or you can give your agent its full path. Your agent downloads nothing unless you say yes first.
 
+1. Open the [latest release](https://github.com/CubeLink-oss/voltdir/releases/latest) in your browser and download two files: `voltdir.exe` and `voltdir.exe.sha256`.
+2. Check the download. The command below prints the file's SHA-256, which must equal the first word inside `voltdir.exe.sha256` (the release notes show it too):
+
 ```powershell
-$dir = "$env:LOCALAPPDATA\Programs\voltdir"
-New-Item -ItemType Directory -Force $dir | Out-Null
-Invoke-WebRequest https://github.com/CubeLink-oss/voltdir/releases/latest/download/voltdir.exe -OutFile "$dir\voltdir.exe"
-Invoke-WebRequest https://github.com/CubeLink-oss/voltdir/releases/latest/download/voltdir.exe.sha256 -OutFile "$dir\voltdir.exe.sha256"
-(Get-FileHash "$dir\voltdir.exe" -Algorithm SHA256).Hash     # must equal the first word of voltdir.exe.sha256
-Get-Content "$dir\voltdir.exe.sha256"
+(Get-FileHash .\voltdir.exe -Algorithm SHA256).Hash
 ```
 
-Then either add that folder to your `PATH`, or tell your agent: "voltdir is at `%LOCALAPPDATA%\Programs\voltdir\voltdir.exe`". The binary is not code-signed yet, so Windows SmartScreen may warn you the first time. You can also build it yourself from source; the steps are in the main repository.
+3. Put `voltdir.exe` in a folder on your `PATH`, or tell your agent where it is, for example: "voltdir is at `C:\Tools\voltdir.exe`".
+
+The binary is not code-signed yet, so Windows SmartScreen may warn you the first time. You can also build it yourself from source; the steps are in the main repository.
 
 ## Safety
 
