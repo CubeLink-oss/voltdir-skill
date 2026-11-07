@@ -1,0 +1,15 @@
+{
+  "name": "voltdir-skill",
+  "description": "voltdir: read-only Windows disk analysis for AI agents (skill package).",
+  "owner": {
+    "name": "CubeLink-oss"
+  },
+  "plugins": [
+    {
+      "name": "voltdir",
+      "source": "./",
+      "description": "Read-only Windows disk analysis for AI agents. Instructions only; voltdir.exe is a separate download.",
+      "version": "0.0.3"
+    }
+  ]
+}

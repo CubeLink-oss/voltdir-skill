@@ -1,0 +1,16 @@
+{
+  "name": "voltdir",
+  "displayName": "voltdir",
+  "version": "0.0.3",
+  "description": "Claude skill for read-only Windows disk analysis: where the space went, and the files you mean (photos, duplicates, PDFs that chat apps download), with every follow-up answered in about a second. Instructions only; the voltdir.exe it drives is a separate, checkable download.",
+  "author": {
+    "name": "CubeLink-oss"
+  },
+  "homepage": "https://github.com/CubeLink-oss/voltdir",
+  "repository": "https://github.com/CubeLink-oss/voltdir-skill",
+  "documentationUrl": "https://github.com/CubeLink-oss/voltdir-skill#readme",
+  "supportUrl": "https://github.com/CubeLink-oss/voltdir/issues",
+  "privacyPolicyUrl": "https://github.com/CubeLink-oss/voltdir-skill/blob/main/PRIVACY.md",
+  "license": "Apache-2.0",
+  "keywords": ["windows", "disk", "storage", "ntfs", "cli", "read-only"]
+}
